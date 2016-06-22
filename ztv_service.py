@@ -28,17 +28,6 @@ def convert_string_from_dict_dzo(string):
 
 def adapt_procuringEntity(tender_data):
     tender_data['data']['procuringEntity']['name'] = u"Ольмек"
-    tender_data['data']['procuringEntity']['contactPoint']['name'] = u"Той Кого Не Можна Називати"
-    tender_data['data']['procuringEntity']['contactPoint']['telephone'] = u"+380878787887"
-    tender_data['data']['procuringEntity']['contactPoint']['email'] = u"ztvprovider1@gmail.com"
-    tender_data['data']['procuringEntity']['identifier']['scheme'] = u"UA-EDR"
-    tender_data['data']['procuringEntity']['identifier']['id'] = u"11112122"
-    tender_data['data']['procuringEntity']['identifier']['legalName'] = u"ПрАТ <Ольмек>"
-    tender_data['data']['procuringEntity']['address']['postalCode'] = u"11111"
-    tender_data['data']['procuringEntity']['address']['countryName'] = u"Україна"
-    tender_data['data']['procuringEntity']['address']['streetAddress'] = u"Жовківська, 35/3"
-    tender_data['data']['procuringEntity']['address']['region'] = u"Львівська область"
-    tender_data['data']['procuringEntity']['address']['locality'] = u"Жовква"
     return tender_data
 
 def adapt_view_data(value, field_name):
