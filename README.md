@@ -1,4 +1,4 @@
-# robot_tests.broker.dzo
+# robot_tests.broker.ztv
 
 This repository is a part of OpenProcurement [Robot tests] package.
 
