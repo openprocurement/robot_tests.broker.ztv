@@ -12,7 +12,6 @@ ${locator.tenderId}   xpath=//div[contains(text(), 'TenderID')]/following-siblin
 Підготувати дані для оголошення тендера
   [Arguments]  ${username}  ${tender_data}
   ${tender_data}=   adapt_procuringEntity   ${tender_data}
-  ${tender_data}=   adapt_delivery_end_date   ${tender_data}
   [return]  ${tender_data}
 
 Підготувати клієнт для користувача
@@ -54,9 +53,8 @@ Login
   Click Element   xpath= //button[@class="btn btn-default btn_submit_form"]
   Wait Until Page Contains Element   ${locator.tenderId}   10
   ${tender_UAid}=   Get Text   ${locator.tenderId}  
-  ${Ids}=   Convert To String   ${tender_UAid}
-  Set Test Variable   ${Ids}
-  [return]  ${Ids}
+  #${Ids}=   Convert To String   ${tender_UAid}
+  [return]  ${tender_UAid}
 
 Додати предмет
   [Arguments]  ${items}  ${index}
@@ -202,8 +200,7 @@ Login
   [Arguments]  ${username}  ${path}  ${bidid}  ${docid}
   Sleep   200
   Reload Page
-  Choose File   xpath=//div[contains(text(), 'Замiнити')]/form/input   ${path}   
-  Confirm Action
+  Choose File   xpath=//div[contains(text(), 'Замiнити')]/form/input   ${path}
   Click Element   xpath=//button[contains(text(), 'Вiдправити')]
   Wait Until Element Is Visible   xpath=//div[contains(@class, 'alert-success')]
   
